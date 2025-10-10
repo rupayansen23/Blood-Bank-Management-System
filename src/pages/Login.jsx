@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import Navbar from '../components/Navbar'
 
 const signupSchema = z.object({
   firstName: z.string().min(3, "Minimum character should be 3"),
@@ -22,10 +23,14 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4"> {/* Centering container */}
+    <div>
+      <div>
+        <Navbar></Navbar>
+      </div>
+      <div className="min-h-screen flex items-center justify-center p-4"> {/* Centering container */}
       <div className="card w-96 bg-base-100 shadow-xl"> {/* Existing card styling */}
         <div className="card-body">
-          <h2 className="card-title justify-center text-3xl">User Login</h2> {/* Centered title */}
+          <h2 className="card-title justify-center text-3xl">Administration Login</h2> {/* Centered title */}
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* Existing form fields */}
 
@@ -62,7 +67,7 @@ export default function Login() {
             <div className="form-control mt-6 flex justify-center">
               <button
                 type="submit"
-                className="btn bg-red-500 hover:cursor-pointer text-white font-bold"
+                className="btn bg-red-500 hover:cursor-pointer hover:bg-red-900 text-white font-bold"
               >
                 Login
               </button>
@@ -70,6 +75,7 @@ export default function Login() {
           </form>
         </div>
       </div>
+    </div>
     </div>
   );
 }

@@ -14,7 +14,9 @@ export default function Navbar() {
                     <li className=" ml-3 text-red-400 hover:text-white cursor-pointer">
                         <Link to="/about">About</Link>
                     </li>
-                    <li className=" ml-3 text-red-400 hover:text-white cursor-pointer">Guidlines</li>
+                    <li className=" ml-3 text-red-400 hover:text-white cursor-pointer">
+                        <Link to="/guidelines">Guidelines</Link>
+                    </li>
                     <li className=" ml-3 text-red-400 hover:text-white cursor-pointer">Services</li>
                     <li className=" ml-3 text-red-400 hover:text-white cursor-pointer">Contract</li>
                 </ul>
@@ -24,7 +26,9 @@ export default function Navbar() {
                     <li className="mr-5 text-red-400 hover:text-white cursor-pointer">Check Blood</li>
                     <li className="mr-5 text-red-400 hover:text-white cursor-pointer">Doner Form</li>
                     <li className="mr-5 text-red-400 hover:text-white cursor-pointer">Doner Details</li>
-                    <li className="mr-5 text-red-400 hover:text-white cursor-pointer">Admin Login</li>
+                    <li className="mr-5 text-red-400 hover:text-white cursor-pointer">
+                        <Link to="/login">Admin Login</Link>
+                    </li>
                 </ul>
             </div>
         </div>
