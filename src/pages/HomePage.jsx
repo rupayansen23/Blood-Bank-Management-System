@@ -3,7 +3,7 @@ import Footer from "../components/Footer"
 
 export default function HomePage() {
     return (
-        <div className="mt-0 pt-0">
+        <div className="mt-0 pt-0 bg-white">
             <Navbar></Navbar>
             <div className="">
                 <img src="/banner1.jpg"></img>
@@ -18,7 +18,7 @@ export default function HomePage() {
                 </div>
             </div>
             <div className="flex flex-col ">
-                    <div className="p-5 m-10  bg-red-400 rounded-2xl shadow-lg">
+                    <div className="p-5 m-10 bg-red-400 rounded-2xl shadow-lg">
                         <h1 className="font-bold text-3xl text-center">BLOOD GROUPS</h1>
                         <p className="text-xl text-center">blood group of any human being will mainly fall in any one of the following groups..</p>
                     </div>

@@ -23,13 +23,13 @@ export default function Login() {
   };
 
   return (
-    <div>
+    <div className='bg-white'>
       <div>
         <Navbar></Navbar>
       </div>
       <div className="min-h-screen flex items-center justify-center p-4"> {/* Centering container */}
       <div className="card w-96 bg-base-100 shadow-xl"> {/* Existing card styling */}
-        <div className="card-body">
+        <div className="card-body bg-white text-black rounded-2xl">
           <h2 className="card-title justify-center text-3xl">Administration Login</h2> {/* Centered title */}
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* Existing form fields */}
@@ -41,7 +41,7 @@ export default function Login() {
               <input
                 type="email"
                 placeholder="john@example.com"
-                className={`input input-bordered ${errors.emailId && 'input-error'}`}
+                className={`input input-bordered bg-white border-gray-500 focus:outline-none focus:ring-2 focus:ring-pink-300 ${errors.emailId && 'input-error'}`}
                 {...register('emailId')}
               />
               {errors.emailId && (
@@ -56,7 +56,7 @@ export default function Login() {
               <input
                 type="password"
                 placeholder="••••••••"
-                className={`input input-bordered ${errors.password && 'input-error'}`}
+                className={`input input-bordered  bg-white border-gray-500 focus:outline-none focus:ring-2 focus:ring-pink-300 ${errors.password && 'input-error'}`}
                 {...register('password')}
               />
               {errors.password && (

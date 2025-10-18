@@ -18,7 +18,8 @@ export default function Navbar() {
                         <Link to="/guidelines">Guidelines</Link>
                     </li>
                     <li className=" ml-3 text-red-400 hover:text-white cursor-pointer">Services</li>
-                    <li className=" ml-3 text-red-400 hover:text-white cursor-pointer">Contract</li>
+                    <li className=" ml-3 text-red-400 hover:text-white cursor-pointer"><Link to="/contactus">Contact Us</Link></li>
+                        
                 </ul>
             </div>
             <div className="flex items-center">

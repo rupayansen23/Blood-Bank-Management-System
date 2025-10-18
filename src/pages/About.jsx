@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 
 export default function About() {
     return (
-        <div>
+        <div className="bg-white">
             <div>
                 <Navbar></Navbar>
             </div>
@@ -38,15 +38,15 @@ export default function About() {
             <div className="mt-20 mx-10">
                 <h2 className="text-5xl font-bold text-gray-900 mb-8">What Our Donors Say</h2>
                 <div className="space-y-6">
-                    <div className="bg-gray-100 rounded-lg p-6 text-xl italic">
+                    <div className="bg-gray-100 rounded-lg p-6 text-xl italic  text-black">
                         "Donating blood with this organization was easy and safe!"<br />
                         <span className="font-bold not-italic">- Rohit</span>
                     </div>
-                    <div className="bg-gray-100 rounded-lg p-6 text-xl italic">
+                    <div className="bg-gray-100 rounded-lg p-6 text-xl italic text-black">
                         "I appreciate their efforts in making a difference in the community."<br />
                         <span className="font-bold not-italic">- Binoy</span>
                     </div>
-                    <div className="bg-gray-100 rounded-lg p-6 text-xl italic">
+                    <div className="bg-gray-100 rounded-lg p-6 text-xl italic  text-black">
                         "The team was welcoming and professional during my donation."<br />
                         <span className="font-bold not-italic">- Sourin</span>
                     </div>
