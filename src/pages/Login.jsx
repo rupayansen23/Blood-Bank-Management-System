@@ -2,10 +2,13 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import Navbar from '../components/Navbar'
+import axios from 'axios';
+//const API_BASE = 'http://localhost:8081';
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
+
 
 const signupSchema = z.object({
-  firstName: z.string().min(3, "Minimum character should be 3"),
-  emailId: z.string().email("Invalid Email"),
+  userName: z.string().email("Invalid Email"),
   password: z.string().min(8, "Password is to weak")
 });
 
@@ -16,10 +19,26 @@ export default function Login() {
     formState: { errors },
   } = useForm({ resolver: zodResolver(signupSchema) });
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     console.log(data);
-
-    // Backend data ko send kar dena chaiye?
+    try {
+      const res = await fetch(`${API_BASE}/adminLogin`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data), 
+      });
+      if (!res.ok) {
+        const msg = await res.text();
+        throw new Error(msg || 'Login failed');
+      }
+      else {
+        const text = await res.text();
+        console.log('response status', res.status, 'body', text);
+      }
+    }
+    catch(error) {
+      console.log(error, error.message);
+    }
   };
 
   return (
@@ -42,7 +61,7 @@ export default function Login() {
                 type="email"
                 placeholder="john@example.com"
                 className={`input input-bordered bg-white border-gray-500 focus:outline-none focus:ring-2 focus:ring-pink-300 ${errors.emailId && 'input-error'}`}
-                {...register('emailId')}
+                {...register('userName')}
               />
               {errors.emailId && (
                 <span className="text-error">{errors.emailId.message}</span>
