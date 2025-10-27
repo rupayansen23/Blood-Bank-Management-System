@@ -47,7 +47,7 @@ export default function Login() {
         <Navbar></Navbar>
       </div>
       <div className="min-h-screen flex items-center justify-center  p-4"> {/* Centering container */}
-      <div className="card w-96 bg-base-100 shadow-xl bg-white"> {/* Existing card styling */}
+      <div className="card w-96 shadow-xl bg-white"> {/* Existing card styling */}
         <div className="card-body bg-white text-black rounded-2xl">
           <h2 className="card-title justify-center text-3xl">Administration Login</h2> {/* Centered title */}
           <form onSubmit={handleSubmit(onSubmit)}>
